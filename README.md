@@ -1,6 +1,6 @@
 # my-first-vue-router
 
-vue-routerで遊んでみた。
+vue-routerで遊んでみた。  
 (my first try of vue-router)
 
 
@@ -9,6 +9,7 @@ vue-routerで遊んでみた。
 ``` bash
 npm install webpack -g
 npm install
+npm run-script run
 ```
 
 
