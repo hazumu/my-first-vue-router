@@ -11,12 +11,13 @@ div
   h1 {{msg}}
   div id - {{id}}
   comp-a
-  comp-b
+  my-modal
+  button(v-on="click:openModal") モーダルを開く
 </template>
 
 <script>
 import compA from '../components/a.vue'
-import compB from '../components/b.vue'
+import modal from '../components/modal.vue'
 export default {
   data () {
     return {
@@ -26,7 +27,12 @@ export default {
   },
   components: {
     'comp-a': compA,
-    'comp-b': compB
+    'my-modal': modal
+  },
+  methods: {
+    openModal() {
+      this.$broadcast('open-modal', this)
+    }
   }
 }
 </script>
